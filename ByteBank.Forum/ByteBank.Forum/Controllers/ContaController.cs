@@ -52,7 +52,7 @@ namespace ByteBank.Forum.Controllers
                 var usuario = UserManager.FindByEmail(modelo.Email);
                 var usuarioJaExiste = usuario != null;
 
-                if (UsuarioAplicacao)
+                if (usuarioJaExiste)
                 {
                     return RedirectToAction("Index", "Home");
                 }
